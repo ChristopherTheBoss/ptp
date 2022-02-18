@@ -2955,7 +2955,7 @@ body#staff .thin > div:nth-of-type(2) h3 {
 
 #omnibar {
   text-align: center;
-  //font-size: 18px;
+  font-size: 16px;
   outline:0;
   padding: 4px 14px;
   background-color: #222;
@@ -2968,6 +2968,14 @@ body#staff .thin > div:nth-of-type(2) h3 {
 #omnibar:focus {
   background-color: #C8D0D4;
   color: black;
+}
+
+label {
+  font-size: 16px;
+}
+
+label span.text {
+  margin-left: 2px;
 }
 
 .search-bar {
