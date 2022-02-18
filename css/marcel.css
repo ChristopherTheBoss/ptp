@@ -3146,7 +3146,7 @@ input[name="omni_radio"]:checked+label span.icon.desaturate { filter: brightness
 }
 
 #userinfo_minor:hover, #userinfo_minor:active {
-  top: 122px;
+  top: 116px;
 }
 
 #userinfo_minor:hover:before {
