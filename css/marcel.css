@@ -3137,7 +3137,7 @@ input[name="omni_radio"]:checked+label span.icon.desaturate { filter: brightness
   top: -50px;
   width: 48px;
   height: 42px;
-  margin-top: 1122px;
+  margin-top: 1116px;
   border-top-right-radius: 6px;
   line-height: 42px;
   font-size: 20px;
@@ -3146,7 +3146,7 @@ input[name="omni_radio"]:checked+label span.icon.desaturate { filter: brightness
 }
 
 #userinfo_minor:hover, #userinfo_minor:active {
-  top: 122px;
+  top: 116px;
 }
 
 #userinfo_minor:hover:before {
