@@ -2967,6 +2967,7 @@ body#staff .thin > div:nth-of-type(2) h3 {
 
 #omnibar:focus {
   background-color: #C8D0D4;
+  color: black;
 }
 
 .search-bar {
