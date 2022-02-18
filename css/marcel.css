@@ -3134,7 +3134,7 @@ input[name="omni_radio"]:checked+label span.icon.desaturate { filter: brightness
 
 #userinfo_minor:before {
   content: "";
-  top: -50px;
+  top: -44px;
   width: 48px;
   height: 42px;
   margin-top: 1116px;
