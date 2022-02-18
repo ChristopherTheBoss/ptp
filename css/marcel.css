@@ -2960,7 +2960,7 @@ body#staff .thin > div:nth-of-type(2) h3 {
 .search-bar__list {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: none;
+  display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -3019,7 +3019,7 @@ body#staff .thin > div:nth-of-type(2) h3 {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  height: 48px;
+  height: 42px;
   padding-right: 48px;
   list-style: none;
   text-align: center;
@@ -3044,9 +3044,8 @@ body#staff .thin > div:nth-of-type(2) h3 {
 .main-menu a {
   display: block;
   width: 100%;
-  height: 48px;
-  line-height: 48px;
-  text-transform: uppercase;
+  height: 42px;
+  line-height: 42px;
   color: #fff;
   font-size: 13px;
   font-weight: 400;
@@ -3082,10 +3081,10 @@ body#staff .thin > div:nth-of-type(2) h3 {
   content: "";
   top: -50px;
   width: 48px;
-  height: 48px;
+  height: 42px;
   margin-top: 1122px;
   border-top-right-radius: 6px;
-  line-height: 48px;
+  line-height: 42px;
   font-size: 20px;
   background-color: rgba(233, 228, 213, 0.2);
   cursor: pointer;
