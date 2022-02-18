@@ -2972,6 +2972,10 @@ body#staff .thin > div:nth-of-type(2) h3 {
 
 label {
   font-size: 16px;
+  padding: 4px;
+  background-color: #222;
+  border-radius: 4px;
+  margin: 0 2px;
 }
 
 label span.text {
@@ -2983,9 +2987,22 @@ input[name="omni_radio"] {
   appearance: none;
 }
 
+input[name="omni_radio"]:checked+label {
+  background-color: #333;
+}
+
 input[name="omni_radio"]:checked+label span.text {
   display: inline;
 }
+
+span.icon { filter: brightness(85%) contrast(90%); transition: filter 0.33s; }
+span.icon.desaturate { filter: saturate(70%) brightness(85%) contrast(90%); transition: filter 0.5s; }
+
+span.icon:hover { filter: brightness(95%) contrast(100%); }
+span.icon.desaturate:hover { filter: saturate(95%) brightness(95%) contrast(100%); }
+
+input[name="omni_radio"]:checked+label span.icon { filter: brightness(95%) contrast(100%); }
+input[name="omni_radio"]:checked+label span.icon.desaturate { filter: brightness(95%) contrast(100%); }
 
 .search-bar {
   margin-bottom: 2px;
