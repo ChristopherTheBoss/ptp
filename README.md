@@ -1,6 +1,8 @@
+Main branch is now omnibar since I don't know how to Github.
+
 # ptp
 
-> *Like I said, what the fuck are we supposed to do?*
+> *Like I said, what the f💣 are we supposed to do?*
 <br>
 
 ## Django <sup>`BETA`</sup>
