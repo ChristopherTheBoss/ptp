@@ -2976,6 +2976,15 @@ label {
 
 label span.text {
   margin-left: 2px;
+  display: none;
+}
+
+input[name="omni_radio"] {
+  appearance: none;
+}
+
+input[name="omni_radio"]:checked+label span.text {
+  display: inline;
 }
 
 .search-bar {
