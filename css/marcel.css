@@ -2968,6 +2968,7 @@ body#staff .thin > div:nth-of-type(2) h3 {
   border: none;
   transition: background-color 0.8s ease-in-out;
   margin: 0 4px;
+  width: 360px;
 }
 
 #omnibar:focus {
