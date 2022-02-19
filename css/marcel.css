@@ -3010,10 +3010,26 @@ input[name="omni_radio"]:checked+label span.icon.desaturate { filter: brightness
 
 .search-bar {
   margin-bottom: 2px;
-  display: grid;
+  display: inline-grid;
   grid-template-columns: repeat(3, 1fr);
   width: 100%;
 }
+
+.searchbar div {
+  align-self: center;
+}
+
+.searchbar div.left {
+  justify-self: right;
+}
+
+.searchbar form#omniform {
+  justify-self: center;
+  align-self: center;
+  margin: 0;
+  padding: 0;
+}
+  
 
 .search-bar__list {
   display: -webkit-box;
