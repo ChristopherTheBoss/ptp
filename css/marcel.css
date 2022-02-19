@@ -2,7 +2,8 @@
 /* ----------- Like I said, what the fuck are we supposed to do? ---------------
 
 Marcel stylesheet for passthepopcorn
-by jimpalompa
+by jimpalompa 
+& crisptoast
 
 Stylesheet url: https://github.com/jimpalompa/ptp
 Profile url: https://passthepopcorn.me/user.php?id=53284
@@ -3015,15 +3016,15 @@ input[name="omni_radio"]:checked+label span.icon.desaturate { filter: brightness
   width: 100%;
 }
 
-.searchbar div {
+.search-bar div {
   align-self: center;
 }
 
-.searchbar div.left {
+.search-bar div.left {
   justify-self: right;
 }
 
-.searchbar form#omniform {
+.search-bar form#omniform {
   justify-self: center;
   align-self: center;
   margin: 0;
