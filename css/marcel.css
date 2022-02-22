@@ -3013,7 +3013,7 @@ input[name="omni_radio"]:checked+label span.icon.desaturate { filter: brightness
 .search-bar {
   margin-bottom: 2px;
   display: inline-grid;
-  grid-template-columns: 1fr, 365px, 1fr;
+  grid-template-columns: 1fr 365px 1fr;
   width: 100%;
   background: #282828;
   background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(40,40,40,1) 1%, rgba(40,40,40,1) 99%, rgba(0,0,0,0) 100%);
