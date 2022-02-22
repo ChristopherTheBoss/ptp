@@ -2708,16 +2708,16 @@ body#staff .thin > div:nth-of-type(2) h3 {
 
 .site-logo {
   position: absolute;
-  width: 267px;
-  height: 36px;
-  margin-top: 17px;
+  width: 300px;
+  height: 38px;
+  margin-top: 16px;
 }
 
 .site-logo a {
   display: block;
   width: 100%;
   height: 100%;
-  background: url(//jimpalompa.github.io/ptp/images/django_logo_old.png) no-repeat center;
+  background: center / contain no-repeat url(//christophertheboss.github.io/ptp/images/logo-white.png);
 }
 
 #userinfo {
@@ -2740,7 +2740,7 @@ body#staff .thin > div:nth-of-type(2) h3 {
 
 #userinfo_username {
   font-size: 0;
-  margin-left: 279px;
+  margin-left: 310px;
   top: -1000px;
 }
 
@@ -2972,7 +2972,7 @@ body#staff .thin > div:nth-of-type(2) h3 {
 }
 
 #omnibar:focus {
-  background-color: #C8D0D4;
+  background-color: #D8E3E8;
   color: black;
 }
 
@@ -3013,7 +3013,7 @@ input[name="omni_radio"]:checked+label span.icon.desaturate { filter: brightness
 .search-bar {
   margin-bottom: 2px;
   display: inline-grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr, 365px, 1fr;
   width: 100%;
   background: #282828;
   background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(40,40,40,1) 1%, rgba(40,40,40,1) 99%, rgba(0,0,0,0) 100%);
@@ -3127,7 +3127,9 @@ input[name="omni_radio"]:checked+label span.icon.desaturate { filter: brightness
   height: 42px;
   line-height: 42px;
   color: #fff;
-  font-size: 13px;
+  font-size: 14px;
+  font-variant: small-caps;
+  letter-spacing: 0.04em;
   font-weight: 400;
   -webkit-transition: none;
   transition: none;
@@ -3230,6 +3232,10 @@ input[name="omni_radio"]:checked+label span.icon.desaturate { filter: brightness
 .alert-bar br {
   display: none;
 }
+
+span.spoiler a { color: black; }
+
+span.spoiler a:hover { color: #ded1c1; }
 
 /* =============================================================================
   RESPONSIVE LAYOUT
