@@ -22,7 +22,7 @@ Profile url: https://passthepopcorn.me/user.php?id=53284
 @import url(//fonts.googleapis.com/css?family=Playfair+Display:400,700,700i|Source+Sans+Pro);
 @import url(//fonts.googleapis.com/icon?family=Material+Icons);
 #morecast:before, #toggle_add_similar_movies:before, #toggleaddtags:before {
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro", Arial, Helvetica, "Helvetica Neue", Verdana, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Arial, Helvetica, "Helvetica Neue", Verdana, sans-serif;
 }
 
 .discuss:before, .panel__heading__toggler:before, .toggle:before {
@@ -243,7 +243,7 @@ body, html {
 body {
   background: #1a1a1a;
   color: #fff;
-  font-family: -apple-system, BlinkMacSystemFont, Arial, Helvetica, "Helvetica Neue", Verdana, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro", Arial, Helvetica, "Helvetica Neue", Verdana, sans-serif;
   font-size: 14px;
   font-weight: 300;
 }
@@ -2708,7 +2708,7 @@ body#staff .thin > div:nth-of-type(2) h3 {
 
 .site-logo {
   position: absolute;
-  width: 300px;
+  width: 360px;
   height: 38px;
   margin-top: 16px;
 }
