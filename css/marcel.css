@@ -2949,7 +2949,7 @@ body#staff .thin > div:nth-of-type(2) h3 {
   display: inline-block;
 }
 
-#omnibar {
+#omnibar, #omnisearch, #torrentsearch, #artistsearch {
   text-align: center;
   font-size: 16px;
   outline:0;
@@ -2962,7 +2962,7 @@ body#staff .thin > div:nth-of-type(2) h3 {
   width: 360px;
 }
 
-#omnibar:focus {
+#omnibar:focus, #omnisearch:focus, #torrentsearch:focus, #artistsearch:focus {
   background-color: #D8E3E8;
   color: black;
 }
