@@ -2932,17 +2932,38 @@ body#staff .thin > div:nth-of-type(2) h3 {
   color: #ffff99;
 }
 
-#nav_donate a:before {
-  content: "";
-  font-size: 21px;
+#userinfo_major > *:not(#nav_donate):hover {
+    filter: drop-shadow(0 0 2px rgba(100,200,150,0.5));
+    transition: 0.5s;
 }
 
 #nav_donate a:before {
+  content: "";
+  font-size: 21px;
   color: rgba(255, 51, 31, 0.7);
+  transition: color 1s;
 }
 
 #nav_donate a:hover:before {
   color: #ff331f;
+}
+
+#nav_donate:hover {
+    animation: heartbeat 0.95s infinite;
+}
+
+@keyframes heartbeat {
+    from {
+        transform: scale(1);
+    }
+    
+    50% {
+        transform: scale(1.15);
+    }
+    
+    to {
+        transform: scale(1);
+    }
 }
 
 .search-bar > form {
@@ -3010,7 +3031,7 @@ input[name="omni_radio"]:checked+label span.icon.desaturate { filter: brightness
 .search-bar {
   margin-bottom: 2px;
   display: inline-grid;
-  grid-template-columns: 1fr 364px 1fr;
+  grid-template-columns: 1fr auto 1fr;
   width: 100%;
   background: #282828;
   background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(40,40,40,1) 1%, rgba(40,40,40,1) 99%, rgba(0,0,0,0) 100%);
