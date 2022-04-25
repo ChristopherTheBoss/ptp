@@ -2945,7 +2945,7 @@ body#staff .thin > div:nth-of-type(2) h3 {
 }
 
 #nav_donate a:hover:before {
-  color: #ff331f;
+  color: #ff331f !important;
 }
 
 #nav_donate:hover {
