@@ -2796,7 +2796,7 @@ body#staff .thin > div:nth-of-type(2) h3 {
 #userinfo_stats li > span {
   font-size: 14px;
   font-weight: 700;
-  margin: 0 6px;
+  margin-left: 6px;
   white-space: nowrap;
 }
 
