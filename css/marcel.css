@@ -3134,15 +3134,12 @@ input[name="omni_radio"]:checked+label span.icon.desaturate { filter: brightness
   -ms-flex-positive: 1;
   flex-grow: 1;
   padding: 0;
+  background: rgba(223, 222, 222, 0.22);
 }
 
 .main-menu__item:first-of-type,
 .main-menu__item:first-of-type a {
   border-top-left-radius: 6px;
-}
-
-.main-menu__item {
-  background: rgba(233, 228, 213, 0.2);
 }
 
 .main-menu a {
@@ -3160,14 +3157,14 @@ input[name="omni_radio"]:checked+label span.icon.desaturate { filter: brightness
 }
 
 .main-menu a:hover {
-  background: #726f68;
+  background: #726f6D;
 }
 
 #userinfo_minor {
   font-size: 0;
   z-index: 150;
   top: -1000px;
-  background: #726f68;
+  background: #726f6D;
 }
 
 #userinfo_minor a {
@@ -3202,7 +3199,7 @@ input[name="omni_radio"]:checked+label span.icon.desaturate { filter: brightness
 
 #userinfo_minor:hover:before {
   margin-top: 0;
-  background-color: #726f68;
+  background-color: #726F6D;
 }
 
 .user-info-bar__link--highlighted {
@@ -3216,7 +3213,7 @@ input[name="omni_radio"]:checked+label span.icon.desaturate { filter: brightness
   right: 200px;
   display: none;
   margin-top: -36px;
-  background: #726f68;
+  background: #726f6D;
 }
 
 #nav_more:hover ul {
