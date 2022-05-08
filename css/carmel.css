@@ -20,6 +20,10 @@ Stylesheet url: https://github.com/jimpalompa/ptp
 
 @import url(//fonts.googleapis.com/icon?family=Material+Icons);
 
+:root {
+  --link: #ded1c1;
+}
+
 #morecast:before, #toggle_add_similar_movies:before, #toggleaddtags:before {
   font-family: -apple-system, BlinkMacSystemFont, Arial, Helvetica, "Helvetica Neue", Verdana, sans-serif;
 }
@@ -41,7 +45,7 @@ Stylesheet url: https://github.com/jimpalompa/ptp
   text-transform: uppercase;
   border: 1px solid;
   border-radius: 2px;
-  font-family: -apple-system, BlinkMacSystemFont, Arial, Helvetica, "Helvetica Neue", Verdana, sans-serif;
+  font-family: "SF Pro Text", -apple-system, BlinkMacSystemFont, Arial, Helvetica, "Helvetica Neue", Verdana, sans-serif;
   font-weight: 400;
   white-space: nowrap;
   -webkit-transition: none;
@@ -68,7 +72,7 @@ Stylesheet url: https://github.com/jimpalompa/ptp
 }
 
 #morecast:before, #nav_donate a:before, #nav_invite a:before, #nav_upload a:before, #similar_movies li div a:first-child:before, #similar_movies li div a:nth-child(2):before, #stats_hnrs a:before, #stats_leeching a:before, #stats_ratio a:before, #stats_seeding a:before, #toggle_add_similar_movies:before, #toggleaddtags:before, .basic-torrent-list__movie__torrent-opener-link:before, .box_tags li div a:first-child:before, .box_tags li div a:nth-child(2):before, .discuss:before, .panel__heading__toggler:before, .toggle:before {
-  color: #ded1c1;
+  color: var(--link);
 }
 
 #morecast:hover:before, #nav_donate a:hover:before, #nav_invite a:hover:before, #nav_upload a:hover:before, #similar_movies li div a:first-child:hover:before, #similar_movies li div a:nth-child(2):hover:before, #stats_hnrs a:hover:before, #stats_leeching a:hover:before, #stats_ratio a:hover:before, #stats_seeding a:hover:before, #toggle_add_similar_movies:hover:before, #toggleaddtags:hover:before, .basic-torrent-list__movie__torrent-opener-link:hover:before, .box_tags li div a:first-child:hover:before, .box_tags li div a:nth-child(2):hover:before, .discuss:hover:before, .panel__heading__toggler:hover:before, .toggle:hover:before {
@@ -242,7 +246,7 @@ body, html {
 body {
   background: #1a1a1a;
   color: #fff;
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", Arial, Helvetica, "Helvetica Neue", Verdana, sans-serif;
+  font-family: "SF Pro Text", -apple-system, BlinkMacSystemFont, Arial, Helvetica, "Helvetica Neue", Verdana, sans-serif;
   font-size: 14px;
   font-weight: 300;
 }
@@ -250,7 +254,7 @@ body {
 a {
   text-decoration: none;
   outline: 0;
-  color: #ded1c1;
+  color: var(--link);
   -webkit-transition: color 0.1s ease-out;
   transition: color 0.1s ease-out;
 }
@@ -1038,7 +1042,7 @@ img, img:before {
   position: absolute;
   left: 0;
   bottom: 0;
-  color: #ded1c1;
+  color: var(--link);
   font-weight: 700;
 }
 
@@ -1446,7 +1450,7 @@ a[class*=link--seen]:after {
 
 .huge-movie-list__movie__ratings__votes-column .mid, .huge-movie-list__movie__ratings__votes-column .outof {
   margin-left: 2px;
-  color: #ded1c1;
+  color: var(--link);
 }
 
 .huge-movie-list__movie__ratings__votes-column span {
@@ -2760,7 +2764,7 @@ body#staff .thin > div:nth-of-type(2) h3 {
   margin-top: 1055px;
   line-height: 40px;
   font-size: 20px;
-  color: #ded1c1;
+  color: var(--link);
 }
 
 #userinfo_username:hover {
@@ -2776,7 +2780,7 @@ body#staff .thin > div:nth-of-type(2) h3 {
 }
 
 #userinfo_stats {
-  color: #ded1c1;
+  color: var(--link);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -3256,7 +3260,7 @@ input[name="omni_radio"]:checked+label span.icon.desaturate { filter: brightness
 
 span.spoiler a { color: black; }
 
-span.spoiler a:hover { color: #ded1c1; }
+span.spoiler a:hover { color: var(--link); }
 
 /* =============================================================================
   RESPONSIVE LAYOUT
