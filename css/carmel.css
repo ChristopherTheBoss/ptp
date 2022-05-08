@@ -1514,6 +1514,7 @@ a[class*=link--seen]:after {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 16px;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin: 0 -8px;
@@ -1539,7 +1540,6 @@ a[class*=link--seen]:after {
 .cover-movie-list__movie {
   -ms-flex-preferred-size: 20%;
   flex-basis: 20%;
-  padding: 8px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
