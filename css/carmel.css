@@ -2,11 +2,10 @@
 /* ----------- Like I said, what the f💣 are we supposed to do? ---------------
 
 Carmel stylesheet for passthepopcorn
-by jimpalompa 
-& crisptoast
+by jimpalompa: https://passthepopcorn.me/user.php?id=53284
+& crisptoast: https://passthepopcorn.me/user.php?id=59191
 
 Stylesheet url: https://github.com/jimpalompa/ptp
-Profile url: https://passthepopcorn.me/user.php?id=53284
 
 ----------------------------------------------------------------------------- */
 /* -------------------------------------------------------------------------- */
@@ -20,6 +19,7 @@ Profile url: https://passthepopcorn.me/user.php?id=53284
 /* -------------------------------------------------------------------------- */
 
 @import url(//fonts.googleapis.com/icon?family=Material+Icons);
+
 #morecast:before, #toggle_add_similar_movies:before, #toggleaddtags:before {
   font-family: -apple-system, BlinkMacSystemFont, Arial, Helvetica, "Helvetica Neue", Verdana, sans-serif;
 }
