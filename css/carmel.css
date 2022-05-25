@@ -2893,14 +2893,22 @@ body#staff .thin > div:nth-of-type(2) h3 {
 
 #nav_upload {
   -webkit-box-ordinal-group: -1;
-  -ms-flex-order: -2;
-  order: -2;
+  -ms-flex-order: 0;
+  order: 0;
 }
 
 #nav_bonus {
   -webkit-box-ordinal-group: 0;
-  -ms-flex-order: -1;
-  order: -1;
+  -ms-flex-order: 1;
+  order: 1;
+}
+
+#nav_invite {
+  order: 2;
+}
+
+#nav_donate {
+  order: 3;
 }
 
 #nav_upload a:before {
