@@ -3165,14 +3165,14 @@ input[name="omni_radio"]:checked+label span.icon.desaturate { filter: brightness
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  height: 42px;
+  height: 35px;
   padding-right: 48px;
   list-style: none;
   text-align: center;
 }
 
 .main-menu__item {
-  height: 42px;
+  height: 35px;
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
@@ -3188,11 +3188,12 @@ input[name="omni_radio"]:checked+label span.icon.desaturate { filter: brightness
 .main-menu a {
   display: block;
   width: 100%;
-  height: 42px;
-  line-height: 42px;
+  height: 35px;
+  line-height: 35px;
   color: #fff;
   font-size: 14px;
-  font-variant: small-caps;
+  text-transform: uppercase;
+/*font-variant: small-caps;*/
   letter-spacing: 0.04em;
   font-weight: 400;
   -webkit-transition: none;
