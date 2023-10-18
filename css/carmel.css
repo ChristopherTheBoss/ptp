@@ -1082,8 +1082,13 @@ img, img:before {
   font-weight: 700;
 }
 
+.search-form__footer__buttons {
+    display: flex;
+    gap: 12px;
+}
+
 .search-form__footer__buttons input {
-  margin-left: 12px;
+  /*margin-left: 12px;*/
 }
 
 a[onclick*="#taglist"], a[onclick^=ToggleTagSelector] {
