@@ -8,6 +8,143 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Ubuntu+Mono&display=swap');
 @-moz-document domain("passthepopcorn.me") {
 
+    @keyframes heartbeats {
+        0% {
+            transform: scale(.9);
+            text-shadow: 0 0 1px #d220;
+        }
+        20% {
+            transform: scale(1.1);
+            text-shadow: 0 0 3px #d223;
+        }
+        40% {
+            transform: scale(.95);
+            text-shadow: 0 0 2px #d222;
+        }
+        60% {
+            transform: scale(1.15);
+            text-shadow: 0 0 4px #e227;
+        }
+        80% {
+            transform: scale(.95);
+            text-shadow: 0 0 8px #fab6;
+        }
+        100% {
+            transform: scale(.95);
+            text-shadow: 0 0 14px #fff1;
+        }
+    }
+    
+    #userinfo_stats {
+        ::before, ::after {
+            font-size: 22px;
+        }
+
+        #stats_seeding a::before {
+            content: '\e2c6';
+        }
+
+        #stats_leeching a::before {
+            content: '\e2c4';
+        }
+
+        #stats_ratio a::before {
+            content: '\f77b';
+        }
+    }
+
+    #userinfo_major {
+        display: flex;
+        flex: 0 0 168px;
+        align-items: center;
+        justify-content: space-between;
+        order: 1;
+        
+        * {
+            display: flex;
+        }
+        
+        ::before, ::after {
+            font-size: 22px;
+        }
+
+
+        #nav_upload {
+            order: -2;
+        }
+
+        #nav_bonus {
+            order: -1;
+        }
+
+        #nav_upload a::before {
+            content: '\e89c';
+        }
+
+        #nav_invite a::before {
+            content: '\e7fe';
+        }
+
+        #nav_bonus a {
+            background: var(--c--bg--secondary);
+            display: none;
+            text-align: center;
+            width: 180px;
+            padding: 20px;
+            box-shadow: var(--bs--medium);
+            position: absolute;
+            top: 80px;
+            right: 20px;
+            z-index: 200;
+        }
+
+        #nav_bonus a::before {
+            content: '';
+            position: absolute;
+            top: -12px;
+            left: 80px;
+            border-style: solid;
+            border-width: 0 12px 12px 12px;
+            border-color: transparent;
+            border-bottom-color: var(--c--bg--secondary);
+        }
+
+        #nav_bonus a::after {
+            display: block;
+            width: 24px;
+            height: 24px;
+            position: absolute;
+            top: -32px;
+            left: 74px;
+            content: '';
+        }
+
+        #nav_bonus::before {
+            color: var(--c--yellow-shade);
+            content: '\e8e0';
+        }
+
+        #nav_bonus:hover a {
+            display: block;
+        }
+
+        #nav_bonus:hover::before {
+            color: var(--c--yellow);
+        }
+
+        #nav_donate a::before {
+            color: #f88;
+            transition: 1s;
+            content: '\e87d';
+            display: flex;
+        }
+
+        #nav_donate a:hover::before {
+            color: red !important;
+            animation: 1s heartbeats infinite;
+        }
+    }
+
     /*Neo*/
     body {
         display: flex;
@@ -522,8 +659,9 @@ Make this only for when message is new since last visit to inbox.php with JS
             justify-content: center;
             align-items: center;
             gap: 36px;
-            padding-left: 20px; padding-right: 20px;
-            
+            padding-left: 20px;
+            padding-right: 20px;
+
             #avatar {
                 width: 64px;
                 height: 64px;
@@ -531,12 +669,12 @@ Make this only for when message is new since last visit to inbox.php with JS
                 corner-shape: squircle;
                 opacity: 50%;
                 transition: 250ms;
-                
+
                 &:hover {
                     transform: scale(1.1);
                 }
             }
-            
+
             a {
                 padding: 4px;
 
@@ -557,7 +695,7 @@ Make this only for when message is new since last visit to inbox.php with JS
         .bottom a.notifications span.icon {
             transform-origin: 50% 20%;
             transition: 500ms;
-            
+
             &:hover {
                 animation: 1s 500ms alternate infinite ease-in-out swing;
                 transform: scale(1.16) rotate(33deg);
@@ -1185,7 +1323,7 @@ Make this only for when message is new since last visit to inbox.php with JS
         height: 35px;
     }
 
-    
+
 
     #filmclub .panel__body {
         padding: 6px;
@@ -2668,12 +2806,12 @@ a.main-menu__link {
         background: rgba(255, 255, 255, 0.05);
         border-radius: 5px 5px 0 0;
     }
-    
+
     /*Searchlight*/
-    
     #searchlight {
         --color: oklch(18% 0.03 0);
-        width: 100%; height: 36px;
+        width: 100%;
+        height: 36px;
         background: linear-gradient(90deg in oklch longer hue, var(--color), var(--color));
         display: grid;
         grid-template-columns: 1fr auto 1fr;
@@ -2681,9 +2819,10 @@ a.main-menu__link {
         gap: 5px;
         transition: 1s;
         align-items: center;
-        
+
         input {
-            width: 200px; height: 28px;
+            width: 200px;
+            height: 28px;
             background: #222;
             border-radius: 10px;
             corner-shape: squircle;
@@ -2694,31 +2833,35 @@ a.main-menu__link {
             caret-animation: manual;
             text-shadow: 0 0 2px #fff, 0 0 6px #fff7, 0 0 12px #fff4;
         }
-        
+
         div {
             display: flex;
             gap: 4px;
-            
+
             button {
                 --duration: attr(data-transition-duration ms);
-                width: 28px; height: 28px;
+                width: 28px;
+                height: 28px;
                 /*width: 28px;*/
                 position: relative;
                 background: #222;
                 display: flex;
-                justify-content: start; align-items: center;
+                justify-content: start;
+                align-items: center;
                 border: none;
                 border-radius: 10px;
                 corner-shape: squircle;
                 transition: var(--duration);
-                
+
                 .icon {
                     font-style: normal;
                     font-size: 20px;
                     margin-bottom: 2px;
-                    width: 28px; height: 28px;
+                    width: 28px;
+                    height: 28px;
                     display: flex;
-                    justify-content: center; align-items: center;
+                    justify-content: center;
+                    align-items: center;
                     z-index: 1;
                     transition: 250ms;
                 }
@@ -2729,14 +2872,16 @@ a.main-menu__link {
                     position: absolute;
                     right: 0;
                     display: flex;
-                    justify-content: center; align-items: center;
-                    padding-left: 1px; padding-right: 5px;
+                    justify-content: center;
+                    align-items: center;
+                    padding-left: 1px;
+                    padding-right: 5px;
                     clip-path: rect(0% 100% 100% 100%);
                     /*left: -100%;*/
                     transition: var(--duration);
                 }
             }
-            
+
             button.active {
                 width: attr(data-width-active px);
                 label {
@@ -2744,7 +2889,7 @@ a.main-menu__link {
                     clip-path: rect(0% 100% 100% 0);
                 }
             }
-            
+
             button:not(.active) {
                 .icon {
                     filter: saturate(0.85) brightness(0.85);
@@ -2760,24 +2905,24 @@ a.main-menu__link {
             justify-content: end;
         }
     }
-    
+
     #searchlight:focus-within {
         --color: oklch(22% 0.06 0);
         --hue: attr(data-hue deg);
-        
+
         input {
             background: #ddd;
         }
         button.active {
             background: hsl(var(--hue), 34%, 80%);
             border: 1px solid hsl(var(--hue), 44%, 50%);
-            
+
             .icon {
                 text-shadow: 0 0 4px #0004;
                 filter: saturate(1) brightness(0.9) contrast(1.2) !important;
                 transform: scale(1.1);
             }
-            
+
             label {
                 color: black;
                 text-shadow: 0 0 5px #fff9;
