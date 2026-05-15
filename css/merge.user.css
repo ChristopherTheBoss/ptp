@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Merge
 @namespace      github.com/openstyles/stylus
-@version        1.0.1
+@version        1.0.0
 @description    A new userstyle
 @author         Me
 ==/UserStyle== */
@@ -55,6 +55,13 @@
         100% {
             transform: scale(.95);
             text-shadow: 0 0 14px #fff1;
+        }
+    }
+    
+    #giftBonus form {
+        grid-template-columns: 1fr 1fr;
+        * {
+            grid-column: 1 / 3;
         }
     }
 
@@ -128,27 +135,30 @@
         }
 
         #nav_bonus a {
-            background: var(--c--bg--secondary);
-            display: none;
+            background: #010;
+            display: block;
+            visibility: hidden;
+            transition: 500ms;
             text-align: center;
             width: 180px;
-            padding: 20px;
-            box-shadow: var(--bs--medium);
+            padding: 12px;
+            box-shadow: 0 0 5px #0008;
             position: absolute;
-            top: 80px;
+            top: 57px;
             right: 20px;
+            border-radius: 5px;
             z-index: 200;
         }
 
         #nav_bonus a::before {
             content: '';
             position: absolute;
-            top: -12px;
-            left: 80px;
+            top: -8px;
+            left: 82px;
             border-style: solid;
-            border-width: 0 12px 12px 12px;
+            border-width: 0 10px 8px 10px;
             border-color: transparent;
-            border-bottom-color: var(--c--bg--secondary);
+            border-bottom-color: #010;
         }
 
         #nav_bonus a::after {
@@ -167,7 +177,7 @@
         }
 
         #nav_bonus:hover a {
-            display: block;
+            visibility: visible;
         }
 
         #nav_bonus:hover::before {
@@ -353,34 +363,118 @@
         border-radius: 33%;
     }
 
+    #sidebar {
+        perspective: 1000px;
+    }
+
+    @keyframes rotate {
+        from {
+            transform: rotateY(0deg);
+            opacity: 1;
+        }
+        20% {
+            opacity: 90%;
+        }
+        25% {
+            opacity: 0;
+        }
+        75% {
+            opacity: 0;
+        }
+        80% {
+            opacity: 90%;
+        }
+        to {
+            opacity: 1;
+            transform: rotateY(360deg);
+        }
+    }
+
     #notifications {
         width: 100%;
         background: #111;
         bottom: 0;
         z-index: 100;
         color: #ddd;
-        overflow: hidden;
+        overflow: visible;
         grid-row: 3 / 4;
         border-radius: 10px;
         corner-shape: squircle;
         transition: 1s;
-        
+        margin: 2px;
+
+
         &.hide {
             opacity: 0;
+            transform: translate(0, -36%) scale(75%) rotate3d(1, 0, 0, 45deg);
+            visibility: hidden;
         }
-        
+
         &.show {
             opacity: 33%;
+            transform: translate(0, 0) scale(100%) rotate3d(1, 0, 0, 0deg);
         }
 
         #hnrs {
-            background: #b82;
             text-align: center;
             font-weight: bold;
             padding: 4px;
             font-size: 15px;
             width: 100%;
-            display: block;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: black;
+            text-shadow: 0 0 2px white, 0 0 5px #fff8;
+            height: 34px;
+            --alpha: 33%;
+            background: linear-gradient(to right, rgba(0, 0, 255, var(--alpha)), rgba(0, 0, 255, var(--alpha)) 40%, rgba(255, 255, 255, var(--alpha)) 40%, rgba(255, 255, 255, var(--alpha)) 60%, rgba(255, 0, 0, var(--alpha)) 60%, rgba(255, 0, 0, var(--alpha)));
+            border-radius: 10px 10px 0 0;
+
+            /*&:after {
+                --alpha: 33%;
+                background: linear-gradient(to right, rgba(0, 0, 255, var(--alpha)), rgba(0, 0, 255, var(--alpha)) 40%, rgba(255, 255, 255, var(--alpha)) 40%, rgba(255, 255, 255, var(--alpha)) 60%, rgba(255, 0, 0, var(--alpha)) 60%, rgba(255, 0, 0, var(--alpha)));
+                border-radius: 10px 10px 0 0;
+                width: 100%;
+                height: 34px;
+                content: '';
+                position: absolute;
+               
+                mix-blend-mode: screen;
+            }*/
+        }
+
+        div.lights {
+            display: grid;
+            width: 100%;
+            grid-template-columns: 50% 50%;
+            position: absolute;
+            top: 0;
+            z-index: -1;
+
+            div {
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                svg {
+                    overflow: visible;
+                }
+                circle {
+                    transform-origin: 50%;
+                    animation: 800ms calc(attr(data-i type(<number>)) * 200ms) rotate infinite linear;
+                    filter: blur(2px) drop-shadow(0 0 10px blue);
+                }
+                svg:nth-child(6) circle {
+                    filter: blur(2px) drop-shadow(0 0 10px white);
+                }
+            }
+
+            div:nth-child(2) {
+                flex-direction: row-reverse;
+                circle {
+                    filter: blur(2px) drop-shadow(0 0 10px red);
+                }
+            }
         }
 
         .requests,
@@ -610,7 +704,7 @@ Make this only for when message is new since last visit to inbox.php with JS
         display: grid;
         grid-template-rows: 1fr auto 1fr;
         grid-column: 1 / 2;
-        
+
         &:hover #notifications.show {
             opacity: 1;
         }
@@ -678,14 +772,14 @@ Make this only for when message is new since last visit to inbox.php with JS
                 opacity: 0.66;
                 transition: 300ms;
                 padding: 2px;
-                
+
                 &[href="bookmarks.php"] span.icon {
                     color: hsl(222, 31%, 81%);
                 }
 
                 &.new {
                     opacity: 0.75;
-                    
+
                     span.label {
                         font-weight: bold;
                     }
@@ -720,7 +814,7 @@ Make this only for when message is new since last visit to inbox.php with JS
                     opacity: 1;
                 }
             }
-            
+
             span.label {
                 opacity: 66%;
                 transition: 250ms;
@@ -774,11 +868,11 @@ Make this only for when message is new since last visit to inbox.php with JS
                 }
             }
         }
-        
+
         &:hover {
             .top, .bottom {
                 opacity: 1;
-                
+
                 a span.label {
                     opacity: 1;
                 }
@@ -927,10 +1021,10 @@ Make this only for when message is new since last visit to inbox.php with JS
     #nav_bonus span.tooltip {
         display: block;
         position: absolute;
-        top: 20px;
+        top: 3px;
         padding: 4px;
         visibility: visible;
-        color: #11a011;
+        color: #11b811;
         font-family: 'Roboto';
         text-align: center;
         cursor: pointer;
@@ -964,10 +1058,10 @@ Make this only for when message is new since last visit to inbox.php with JS
         visibility: visible;
     }
 
-    #nav_bonus.bonused:hover a {
+    /* #nav_bonus.bonused:hover a {
         visibility: hidden;
         opacity: 0;
-    }
+    } */
 
     #nav_bonus {
         display: flex;
@@ -1099,7 +1193,7 @@ Make this only for when message is new since last visit to inbox.php with JS
 
     a.torrent-info-link span.icon.blu svg {
         height: 20px;
-        width: 30px;
+        width: 38px;
     }
 
     a.torrent-info-link span.icon.dvd svg {
